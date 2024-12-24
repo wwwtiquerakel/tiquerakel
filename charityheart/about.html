@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #eaf5ea;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* Navbar Style */
+        nav {
+            background-color: #28a745;
+            padding: 15px;
+            position: relative; /* Enable positioning for the logo and logout link */
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem; /* Smaller font size */
+            font-weight: 300; /* Lighter font weight */
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: yellowgreen;
+            text-decoration: black;
+        }
+
+        /* Specific Style for Log Out Link */
+        nav ul li.logout {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+
+        nav ul li.logout a {
+            font-size: 0.9rem;  /* Keep the log out text smaller */
+        }
+
+        /* Logo Style (Text-Based) */
+        .logo {
+            position: absolute;
+            top: 8px;
+            left: 15px;
+            font-size: 1.3rem; /* Adjusted for bigger text */
+            font-weight: lighter;
+            color:rgb(250, 253, 251); /* Green color */
+            font-family: 'Pacifico', cursive;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <!-- HeartShare Logo as Text -->
+        <div class="logo">HeartShare</div>
+
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="events.html">Programs</a></li>
+            <li><a href="getinvolved.html">Get Involved</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+
+    
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Content will be loaded here -->
+    </div>
+
+    <!-- Log Out Confirmation Script -->
+    <script>
+        function confirmLogout() {
+            const userConfirmed = confirm("Are you sure you want to log out?");
+            if (userConfirmed) {
+                // Redirect to the login page or perform any other logout action
+                window.location.href = "index.html";
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - HeartShare</title>
+    
+    <style>
+        /* Ensure all images are responsive and maintain aspect ratio */
+        .responsive-img {
+            width: 100%;
+            max-width: 800px; /* Set a max width for larger images */
+            height: auto; /* Automatically adjusts height to maintain aspect ratio */
+            margin-bottom: 20px; /* Adds spacing between images and text */
+            display: block; /* Makes the images block elements */
+            margin-left: auto; /* Centers the images */
+            margin-right: auto;
+            text-align: center;
+        }
+
+        /* Style for sections and headers */
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #28a745; /* Match with the branding */
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .cta-button {
+            background-color: #28a745;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .cta-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <!-- Include Header -->
+    <div class="container">
+        <!-- About Us Section -->
+        <section class="about-us">
+            <h1>About HeartShare Charity</h1>
+            <p>HeartShare is a non-profit organization that is committed to creating positive change in the lives of those in need. Through community outreach, fundraising efforts, and partnerships with local and international organizations, we aim to provide resources, support, and care to underserved communities. Our goal is to ensure that every person has access to the basic necessities they deserve – food, shelter, healthcare, and education.</p>
+            <img src="Photo/about.jpg" alt="HeartShare in action" class="responsive-img">
+
+            <h2>Our Mission</h2>
+            <p>At HeartShare, our mission is to improve lives by delivering critical resources and support to vulnerable communities. We focus on humanitarian aid, education, healthcare, and community building. Our dedicated volunteers and partners work together to create lasting impact through sustainable programs that foster empowerment and dignity for all.</p>
+
+            <h2>Our Vision</h2>
+            <p>We envision a world where poverty, hunger, and inequality no longer exist. A world where every individual has the opportunity to thrive, regardless of their background or circumstances. Our vision is rooted in the belief that together, we can make the world a better place for future generations.</p>
+
+            <h2>Core Values</h2>
+            <ul>
+                <li><strong>Compassion:</strong> We believe in the power of kindness and compassion to uplift individuals and communities.</li>
+                <li><strong>Integrity:</strong> We operate with honesty, transparency, and accountability in everything we do.</li>
+                <li><strong>Collaboration:</strong> We recognize the importance of working together to achieve common goals and create lasting change.</li>
+                <li><strong>Empowerment:</strong> We aim to empower individuals and communities to help themselves and create sustainable change.</li>
+            </ul>
+
+            <h2>Our Impact</h2>
+            <p>Since our inception, HeartShare has helped thousands of people through our various programs, including:</p>
+            <ul>
+                <li><strong>Food Distribution:</strong> Providing meals and food security to those facing hunger.</li>
+                <li><strong>Healthcare Services:</strong> Offering medical care, vaccinations, and health education to underserved communities.</li>
+                <li><strong>Education Support:</strong> Sponsoring scholarships, providing school supplies, and building learning centers for children in need.</li>
+                <li><strong>Emergency Relief:</strong> Responding to natural disasters and humanitarian crises by providing emergency aid to affected communities.</li>
+            </ul>
+
+            <h2>Join Our Journey</h2>
+            <p>Your involvement is crucial in helping us achieve our mission. Whether through volunteering, donating, or spreading awareness, your support enables us to continue our important work. Together, we can build a world where everyone has access to the resources and opportunities they need to succeed.</p>
+            <img src="Photo/about1.jpg" alt="Volunteers at work" class="responsive-img">
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 HeartShare Charity. All Rights Reserved.</p>
+        <p>Follow us on:</p>
+        <div class="social-media-links">
+            <a href="https://www.facebook.com/rakeruuuuu18?mibextid=ZbWKwL" target="_blank">Facebook</a> |
+            <a href="https://www.tiktok.com/@rakeruu.mu" target="_blank">Tiktok</a> |
+            <a href="https://www.instagram.com/rakeruu.u/" target="_blank">Instagram</a>
+        </div>
+        <p>Contact us: <a href="https://www.messenger.com/rakeruuuuu18">rakeru@heartshare.org</a></p>
+    </div>
+</footer>
+
+<style>
+    /* Basic styling for the footer */
+    footer {
+        background-color: #28a745;  /* Match the charity's branding color */
+        color: white;
+        text-align: center;
+        padding: 20px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .social-media-links a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+    .social-media-links a:hover {
+        text-decoration: underline;
+    }
+
+    .footer-content p {
+        margin: 5px 0;
+    }
+</style>
+    
+
+</body>
+</html>

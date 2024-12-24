@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #eaf5ea;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* Navbar Style */
+        nav {
+            background-color: #28a745;
+            padding: 15px;
+            position: relative; /* Enable positioning for the logo and logout link */
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem; /* Smaller font size */
+            font-weight: 300; /* Lighter font weight */
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: yellowgreen;
+            text-decoration: black;
+        }
+
+        /* Specific Style for Log Out Link */
+        nav ul li.logout {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+
+        nav ul li.logout a {
+            font-size: 0.9rem;  /* Keep the log out text smaller */
+        }
+
+        /* Logo Style (Text-Based) */
+        .logo {
+            position: absolute;
+            top: 8px;
+            left: 15px;
+            font-size: 1.3rem; /* Adjusted for bigger text */
+            font-weight: lighter;
+            color:rgb(250, 253, 251); /* Green color */
+            font-family: 'Pacifico', cursive;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <!-- HeartShare Logo as Text -->
+        <div class="logo">HeartShare</div>
+
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="events.html">Programs</a></li>
+            <li><a href="getinvolved.html">Get Involved</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Content will be loaded here -->
+    </div>
+
+    <!-- Log Out Confirmation Script -->
+    <script>
+        function confirmLogout() {
+            const userConfirmed = confirm("Are you sure you want to log out?");
+            if (userConfirmed) {
+                // Redirect to the login page or perform any other logout action
+                window.location.href = "index.html";
+            }
+        }
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Programs</title>
+    <style>
+        .programs {
+            margin: 20px auto; /* Adjust margin to reduce space above the title */
+            padding: 30px;
+            text-align: center;
+            font-size: 19px;
+        }
+
+        .programs h1 {
+            margin-top: -50px; 
+            color: #28a745; /* Reduce the top margin to move the title higher */
+        }
+
+        .program {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .program h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #28a745;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .program p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .responsive-img {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="container">
+        <!-- Programs Section -->
+        <section class="programs">
+            <h1>Our Programs</h1>
+            <p style="text-align: center; margin-bottom: 30px; font-size: 1.1rem; color: #555;">
+                <br> At HeartShare Charity, we implement impactful programs aimed at improving lives in areas of education, healthcare, shelter, and food security. 
+                Explore our current initiatives below:
+            </p>
+
+            <!-- Program 1 -->
+            <div class="program">
+                <h2>Education for All</h2>
+                <p>We provide scholarships, school supplies, and educational support for children in underserved communities. Our goal is to ensure every child has access to quality education and a brighter future.</p>
+                <img src="Photo/prog1.jpg" alt="Education Program" class="responsive-img">
+            </div>
+
+            <!-- Program 2 -->
+            <div class="program">
+                <h2>Healthcare Support</h2>
+                <p>Through mobile clinics, free health checkups, and essential medicines, we bring healthcare to those in need. Preventive care and awareness programs save lives in vulnerable communities.</p>
+                <img src="Photo/prog2.jpg" alt="Healthcare Program" class="responsive-img">
+            </div>
+
+            <!-- Program 3 -->
+            <div class="program">
+                <h2>Shelter and Housing</h2>
+                <p>We provide safe and secure housing solutions to families affected by natural disasters and poverty. Our shelter programs aim to give families a place they can call home.</p>
+                <img src="Photo/prog3.jpg" alt="Shelter Program" class="responsive-img">
+            </div>
+
+            <!-- Program 4 -->
+            <div class="program">
+                <h2>Food Security</h2>
+                <p>Our food distribution initiatives ensure that families facing hunger receive nutritious meals and groceries. We aim to eliminate food insecurity and malnutrition.</p>
+                <img src="Photo/prog4.jpeg" alt="Food Program" class="responsive-img">
+            </div>
+        </section>
+    </div>
+
+    <!-- Placeholder for Footer -->
+    <footer>
+        <!-- Footer Section -->
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 HeartShare Charity. All Rights Reserved.</p>
+        <p>Follow us on:</p>
+        <div class="social-media-links">
+            <a href="https://www.facebook.com/rakeruuuuu18?mibextid=ZbWKwL" target="_blank">Facebook</a> |
+            <a href="https://www.tiktok.com/@rakeruu.mu" target="_blank">Tiktok</a> |
+            <a href="https://www.instagram.com/rakeruu.u/" target="_blank">Instagram</a>
+        </div>
+        <p>Contact us: <a href="https://www.messenger.com/rakeruuuuu18">rakeru@heartshare.org</a></p>
+    </div>
+</footer>
+
+<style>
+    /* Basic styling for the footer */
+    footer {
+        background-color: #28a745;  /* Match the charity's branding color */
+        color: white;
+        text-align: center;
+        padding: 20px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .social-media-links a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+    .social-media-links a:hover {
+        text-decoration: underline;
+    }
+
+    .footer-content p {
+        margin: 5px 0;
+    }
+</style>
+    </footer>
+</body>
+</html>

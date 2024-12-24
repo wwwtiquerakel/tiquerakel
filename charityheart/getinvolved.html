@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #eaf5ea;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* Navbar Style */
+        nav {
+            background-color: #28a745;
+            padding: 15px;
+            position: relative; /* Enable positioning for the logo and logout link */
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem; /* Smaller font size */
+            font-weight: 300; /* Lighter font weight */
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: yellowgreen;
+            text-decoration: black;
+        }
+
+        /* Specific Style for Log Out Link */
+        nav ul li.logout {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+
+        nav ul li.logout a {
+            font-size: 0.9rem;  /* Keep the log out text smaller */
+        }
+
+        /* Logo Style (Text-Based) */
+        .logo {
+            position: absolute;
+            top: 8px;
+            left: 15px;
+            font-size: 1.3rem; /* Adjusted for bigger text */
+            font-weight: lighter;
+            color:rgb(250, 253, 251); /* Green color */
+            font-family: 'Pacifico', cursive;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <!-- HeartShare Logo as Text -->
+        <div class="logo">HeartShare</div>
+
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="events.html">Programs</a></li>
+            <li><a href="getinvolved.html">Get Involved</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+
+
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Content will be loaded here -->
+    </div>
+
+    <!-- Log Out Confirmation Script -->
+    <script>
+        function confirmLogout() {
+            const userConfirmed = confirm("Are you sure you want to log out?");
+            if (userConfirmed) {
+                // Redirect to the login page or perform any other logout action
+                window.location.href = "index.html";
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+<div class="container">
+    <!-- Get Involved Section -->
+    <section class="get-involved">
+        <h1>Get Involved</h1>
+        <p>At HeartShare Charity, we believe that every individual can make a difference. There are many ways you can get involved to help us create lasting change in the lives of those in need. Whether through donations, volunteering, or partnerships, your support is invaluable.</p>
+        
+        <h2>Ways to Get Involved</h2>
+        <div class="involvement-options">
+            <!-- Donation Option -->
+            <div class="option">
+                <h3>Donate</h3>
+                <p>Your generous donations help fund our programs and allow us to continue providing vital services to those in need. Every contribution counts!</p>
+                <a href="donate.php" class="btn">Donate Now</a>
+            </div>
+            
+            <!-- Volunteer Option -->
+            <div class="option">
+                <h3>Volunteer</h3>
+                <p>Join us in making a direct impact in our communities. Volunteers play a crucial role in helping us implement and expand our programs. Together, we can make a difference.</p>
+                <a href="volunteer.php" class="btn">Become a Volunteer</a>
+            </div>
+            
+            <!-- Partnership Option -->
+            <div class="option">
+                <h3>Partner with Us</h3>
+                <p>If you're an organization or business, consider partnering with us. Together, we can pool resources and reach more people in need.</p>
+                <a href="partner.php" class="btn">Become a Partner</a>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 HeartShare Charity. All Rights Reserved.</p>
+        <p>Follow us on:</p>
+        <div class="social-media-links">
+            <a href="https://www.facebook.com/rakeruuuuu18?mibextid=ZbWKwL" target="_blank">Facebook</a> |
+            <a href="https://www.tiktok.com/@rakeruu.mu" target="_blank">Tiktok</a> |
+            <a href="https://www.instagram.com/rakeruu.u/" target="_blank">Instagram</a>
+        </div>
+        <p>Contact us: <a href="https://www.messenger.com/rakeruuuuu18">rakeru@heartshare.org</a></p>
+    </div>
+</footer>
+
+<style>
+    /* Basic styling for the footer */
+    footer {
+        background-color: #28a745;  /* Match the charity's branding color */
+        color: white;
+        text-align: center;
+        padding: 20px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .social-media-links a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+    .social-media-links a:hover {
+        text-decoration: underline;
+    }
+
+    .footer-content p {
+        margin: 5px 0;
+    }
+</style>
+
+<!-- Styling -->
+<style>
+    .get-involved {
+        margin: -20px auto;
+        padding: 20px;
+        max-width: 800px;
+        text-align: center;
+        color: #555;
+    }
+
+    .get-involved h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #28a745;
+    }
+
+    .get-involved h2 {
+        font-size: 2rem;
+        margin-top: 30px;
+        color: #28a745;
+    }
+
+    .involvement-options {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        flex-wrap: wrap;
+    }
+
+    .option {
+        background: #f9f9f9;
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        width: 30%;
+        margin-bottom: 20px;
+    }
+
+    .option h3 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        color: #28a745;
+    }
+
+    .option p {
+        font-size: 1.1rem;
+        color: #555;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 1rem;
+        background-color: #28a745;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    .btn:hover {
+        background-color: #218838;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        font-size: 1rem;
+        color: #333;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+        border-color: #28a745;
+    }
+
+    .btn-submit {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 1rem;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .btn-submit:hover {
+        background-color: #218838;
+    }
+</style>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // JavaScript to simulate session management
+        document.addEventListener("DOMContentLoaded", () => {
+            const username = localStorage.getItem("username");
+
+            if (!username) {
+                // Redirect to login if not logged in
+                window.location.href = "index.html";
+            } else {
+                // Display the username
+                document.getElementById("username").textContent = username;
+            }
+        });
+
+        function logout() {
+            localStorage.removeItem("username");
+            window.location.href = "index.html";
+        }
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Welcome, <span id="username"></span>!</h2>
+        <p>You have successfully logged in.</p>
+        <button onclick="logout()" style="display: block; margin-top: 1rem; text-align: center;">Logout</button>
+    </div>
+</body>
+</html>

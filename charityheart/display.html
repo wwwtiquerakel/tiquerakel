@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Confirmation</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* General Page Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Centered Container */
+        .message-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            animation: fadeIn 1.5s ease;
+        }
+
+        /* Success Icon */
+        .success-icon {
+            font-size: 48px;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+
+        /* Message Styles */
+        .message-container h1 {
+            font-size: 1.8rem;
+            color: #333333;
+            margin-bottom: 10px;
+        }
+
+        .message-container p {
+            font-size: 1rem;
+            color: #555555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .btn-back {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: white;
+            background-color: #28a745;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-back:hover {
+            background-color: #218838;
+        }
+
+        /* Fade-In Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <script>
+        // JavaScript to handle displaying the message
+        document.addEventListener("DOMContentLoaded", () => {
+            const message = localStorage.getItem("message");
+
+            if (message) {
+                document.getElementById("message").textContent = message;
+                localStorage.removeItem("message"); // Clear the message after displaying it
+            } else {
+                document.getElementById("default-message").style.display = "block";
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="message-container">
+        <!-- Success Icon -->
+        <div class="success-icon">✔</div>
+
+        <!-- Display the Message -->
+        <div id="message-container">
+            <h1>Success!</h1>
+            <p id="message"></p>
+        </div>
+        <div id="default-message" style="display: none;">
+            <h1>Thank you for reaching out to us!</h1>
+            <p>We appreciate your message.</p>
+        </div>
+
+        <!-- Back to Home Button -->
+        <a href="home.html" class="btn-back">Back to Home</a>
+    </div>
+</body>
+</html>

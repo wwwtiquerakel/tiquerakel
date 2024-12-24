@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #eaf5ea;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* Navbar Style */
+        nav {
+            background-color: #28a745;
+            padding: 15px;
+            position: relative; /* Enable positioning for the logo and logout link */
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem; /* Smaller font size */
+            font-weight: 300; /* Lighter font weight */
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: yellowgreen;
+            text-decoration: black;
+        }
+
+        /* Specific Style for Log Out Link */
+        nav ul li.logout {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+
+        nav ul li.logout a {
+            font-size: 0.9rem;  /* Keep the log out text smaller */
+        }
+
+        /* Logo Style (Text-Based) */
+        .logo {
+            position: absolute;
+            top: 8px;
+            left: 15px;
+            font-size: 1.3rem; /* Adjusted for bigger text */
+            font-weight: lighter;
+            color:rgb(250, 253, 251); /* Green color */
+            font-family: 'Pacifico', cursive;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <!-- HeartShare Logo as Text -->
+        <div class="logo">HeartShare</div>
+
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="events.html">Programs</a></li>
+            <li><a href="getinvolved.html">Get Involved</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+
+        <!-- Log Out Link Positioned at the Top Right -->
+        <ul>
+            <li class="logout"><a href="javascript:void(0);" onclick="confirmLogout()">Log Out</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Content will be loaded here -->
+    </div>
+
+    <!-- Log Out Confirmation Script -->
+    <script>
+        function confirmLogout() {
+            const userConfirmed = confirm("Are you sure you want to log out?");
+            if (userConfirmed) {
+                // Redirect to the login page or perform any other logout action
+                window.location.href = "index.html";
+            }
+        }
+    </script>
+</body>
+</html>
